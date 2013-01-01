@@ -1,0 +1,31 @@
+\enableregime[utf] 
+\mainlanguage[cz]  
+\input pdfr-def.mkii % glyph to unicode
+
+\setuplayout
+  [backspace=0pt,
+    topspace=0pt,
+       width=middle,
+      height=middle,
+    location=middle,
+      header=0pt,
+      footer=0pt]
+
+\setuppapersize[A5,landscape][A4]
+\setuppaper[nx=1,ny=2]
+\setuparranging[XY]
+
+\setupinteraction[state=stop]
+\setuppagenumbering[location=,state=stop]
+
+
+
+\starttext
+%\showframe
+
+  \insertpages [skladacka1.pdf][width=0pt]
+  \insertpages [skladacka2.pdf][width=0pt]
+  
+ 
+
+\stoptext

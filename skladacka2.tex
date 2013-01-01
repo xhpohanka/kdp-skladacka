@@ -1,0 +1,197 @@
+\enableregime[utf] 
+\mainlanguage[cz]  
+\input pdfr-def.mkii % glyph to unicode
+
+\usemodule[database]
+
+\setuplayout
+  [backspace=0.6cm,
+   topspace=0.4cm,
+   width=middle,
+   height=middle,
+   location=middle,
+   header=0pt,
+   footer=0pt]
+
+\setuppapersize[A5,landscape][A5,landscape]
+
+
+\usetypescript[heros][ec]
+\setupbodyfont[heros,9pt]
+
+\setupinteraction[state=stop]
+\setuppagenumbering[location=,state=stop]
+
+\setupcolors[state=start]
+
+\def\RowCmd#1#2#3#4#5#6#7{% cas,soubor,rezie,autor,nazev,host,poznamka
+  \bTR%
+    \bTD #1 \eTD%
+    \bTD{\bf #2}\crlf{\em #6}\strut \hfill #3\eTD%
+    \bTD #4 \crlf{\em #7}\strut \hfill {\bfa \setupinterlinespace #5}\eTD%
+  \eTR}
+
+\defineseparatedlist[Hra]
+  [separator={;},
+   command=\RowCmd]
+
+
+
+
+\starttext
+
+
+\setuppapersize[A5,landscape][A5,landscape,180]
+\setuplayout[width=middle]
+\setupalign[middle]
+
+% \framed[rulethickness=0.9pt,strut=no,offset=0em]\bgroup%
+\bTABLE
+  % \setupTABLE[c][first][leftframe=off]
+  % \setupTABLE[c][last][rightframe=off]
+  % \setupTABLE[r][2][topframe=off] % nastavuju az druhej radek viz niz
+  % \setupTABLE[r][last][bottomframe=off] 
+  \setupTABLE[r][each][height=1.345cm]
+  \setupTABLE[c][each][width=0.0812\textwidth]  
+  \setupTABLE[c][4,5,6,10,11,12][width=0.07180\textwidth]  
+  \setupTABLE[r][2][height=0.5cm]
+  \setupTABLE[c][1,7][align={middle,lohi}]
+  \setupTABLE[r][1][height=0cm,frame=off,offset=0pt,distance=0pt,rulethickness=0pt]
+  
+  \bTR % prvni radek tu je kvuli spravnymu rozlozeni tabulky a spojovani bunek
+    \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD   
+    \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD \bTD \eTD
+  \eTR
+  
+
+  \bTR%0
+    \bTD \bf 2011 \eTD \bTD[nc=2] \midaligned{čas představení} \eTD 
+    \bTD[nr=11,nc=3] 
+      \leftskip 1em
+      {\bf OBJEDNÁVKA VSTUPENEK}\vskip 3em
+      jméno    \vskip 3em
+      příjmení \vskip 3em
+      telefon  \vskip 1em
+      adresa   \vskip 10em
+      e-mail   \vskip 3em
+      podpis   \vskip 3em
+    \eTD     
+    \bTD \bf 2011 \eTD \bTD \midaligned{ŽENY} \eTD  \bTD \midaligned{MUŽI} \eTD  \bTD \midaligned{SPOLU} \eTD
+    \bTD[nr=11,nc=3] 
+      \leftskip 1em
+      {\bf OBJEDNÁVKA UBYTOVÁNÍ} \vskip 3em
+      jméno    \vskip 3em
+      příjmení \vskip 3em
+      telefon  \vskip 1em
+      adresa   \vskip 10em
+      e-mail   \vskip 3em
+      podpis   \vskip 3em
+    \eTD   
+  \eTR
+   \bTR%1
+    \bTD pátek    7. října \eTD \bTD 16:00  \eTD \bTD 19:30 \eTD        
+    \bTD pátek    7. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD
+  \eTR  
+  \bTR%2
+    \bTD sobota   8. října \eTD \bTD 16:00 \eTD \bTD 19:30 \eTD        
+    \bTD sobota   8. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD    
+  \eTR                                 
+  \bTR%3                                 
+    \bTD neděle   9. října \eTD \bTD 16:00 \eTD \bTD 19:30 \eTD 
+    \bTD neděle   9. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD
+  \eTR                                 
+  \bTR%4                                
+    \bTD pondělí 10. října \eTD \bTD 9:00 \eTD \bTD 19:30 \eTD 
+    \bTD pondělí 10. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD
+  \eTR                               
+  \bTR%5                               
+    \bTD úterý   11. října \eTD \bTD 16:00 \eTD \bTD 20:00 \eTD 
+    \bTD úterý   11. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD    
+  \eTR
+  \bTR%7                                 
+    \bTD středa  12. října \eTD \bTD 9:00  \eTD \bTD 19:30 \eTD 
+    \bTD středa  12. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD
+  \eTR                                 
+  \bTR%8                                
+    \bTD[nr=2] čtvrtek 13. října \eTD \bTD 9:00 \eTD \bTD[background=color,backgroundcolor=cyan] \eTD 
+    \bTD[nr=2] čtvrtek 13. října \eTD \bTD[nr=2]  \eTD  \bTD[nr=2]  \eTD \bTD[nr=2]  \eTD
+  \eTR
+  \bTR%6
+                \bTD 16:00 \eTD \bTD 19:30 \eTD                           
+  \eTR                                
+  \bTR%9                               
+    \bTD pátek   14. října \eTD \bTD 16:00 \eTD \bTD 19:30 \eTD 
+    \bTD pátek   14. října \eTD       \bTD  \eTD  \bTD  \eTD  \bTD  \eTD   
+  \eTR
+  \bTR%10                               
+    \bTD sobota  15. října \eTD \bTD 15:00 \eTD \bTD[background=color,backgroundcolor=cyan]  \eTD 
+    \bTD sobota  15. října \eTD       \bTD  \eTD  \bTD  \eTD \bTD  \eTD    
+  \eTR
+  
+\eTABLE
+% \egroup
+
+
+\page
+\setuppapersize[A5,landscape][A5,landscape]
+
+\framed[rulethickness=1pt,strut=no,offset=0em]\bgroup%
+\bTABLE%
+  \setupTABLE[c][first][leftframe=off]
+  \setupTABLE[c][last][rightframe=off]
+  \setupTABLE[r][first][topframe=off]
+  \setupTABLE[r][last][bottomframe=off]
+  \setupTABLE[c][1][width=.148\textwidth]  % maliko min kvuli borderu od framed
+  \setupTABLE[c][2][width=.35\textwidth]
+  \setupTABLE[c][3][width=.5\textwidth,align=lohi]
+  \setupTABLE[r][each][height=.07092\textheight]
+  \setupTABLE[r][first]
+     [style=slanted,background=color,
+      backgroundcolor=gray]
+  \startsetups table:margins
+      \leftskip=0.2em
+      \rightskip=0.4em\relax
+  \stopsetups
+  \setupTABLE[c][2,3][setups=table:margins]%
+    
+%
+  \bTR
+    \bTD  Termín představení \eTD
+    \bTD  Divadelní soubor \crlf \strut \hfill Režie \eTD
+    \bTD  Autor \crlf \strut \hfill  Představení \eTD
+  \eTR
+%
+
+\startHra
+% \input divadla2010.csv
+%pátek    8. října\crlf 19:30 hodin;Divadelní spolek Zdobničan Vamberk;Alena Joachimsthalerová;Noel Coward;Rozmarný duch;;
+%sobota   9. října\crlf 16:00 a 19:30 hodin;Mrsťa Prsťa Junior, Kouřim;Martin Drahovzal a Mrsťa Prsťa;Václav Marhoul;Mazaný Filip;;
+%neděle  10. října\crlf 16:00 hodin;host přehlídky;;beseda;Beseda se známou osobností;;
+%neděle  10. října\crlf 19:30 hodin;DS Osada Horní Bříza;Pavel Palán;Eric-Emmanuel Schmitt;Hotel mezi dvěma světy;;
+%pondělí 11. října\crlf 10:00 a 19:30 hodin;Cimrman Revival Sivice;Helena Zdráhalová;Ladislav Smoljak, Zdeněk Svěrák;Dobytí severního pólu;;
+%úterý   12. října\crlf 8:30 a 10:30 hodin;M+M Hranice u Aše;Vratislav Mikan;Vratislav Mikan;Čert a kupec Seberád;;
+%úterý   12. října\crlf 16:00 a 19:30 hodin;Chvaletické divadlo JEN TAK, Chvaletice;Martin Vencl;Tomáš Vůjtek;Výmlat;;
+%středa  13. října\crlf 16:00 hodin;Defilé Pohárku SČDO;;Vítězné výstupy národní soutěže;Monolog ženy, monolog muži;host přehlídky
+%středa  13. října\crlf 19:30 hodin;Morkovští ochotníci o.s.;Bc. Tomáš Ledvina;Norman Robbins;Hrobka;;
+%čtvrtek 14. října\crlf 16:00 a 19:30 hodin;ŠAMU Štítina;Ing. Václav Benda;Eric Assous;Příbuzné si nevybíráme;;
+%pátek   15. října\crlf 16:00 a 19:30 hodin;Rádobydivadlo Klapý;Ladislav Valeš;Nikolaj Koljada;Slepice;;
+%sobota  16. října\crlf 15:00 hodin;DS J. K. Tyl Lomnice nad Popelkou;Renata Tomešová;Carlo Goldoni, Miroslav Pěnička;Poprask na laguně;host přehlídky
+pátek    7. října\crlf 16:00 a 19:30 hodin;DS Krakonoš, Vysoké nad Jizerou;Marie Trunečková;Florimond Hervé, Henri Meilhac, Arthur Millaud;Mam'zelle Nitouche;;;;
+sobota   8. října\crlf 16:00 a 19:30 hodin;Rádobydivadlo Klapý;Ladislav Valeš;Václav Nývlt na motivy Bohumila Hrabala;Taneční hodiny pro pokročilé;;;;
+neděle   9. října\crlf 16:00 hodin;host přehlídky;;beseda;Simona Stašová;;;;
+neděle   9. října\crlf 19:30 hodin;Divadelní soubor KOLÁR, Police nad Metují;Jaroslav Souček;Jaroslav Souček na motivy Jeana Poireta a Elaine Mayové;Ptačí klec;;;;
+pondělí 10. října\crlf 9:00 a 19:30 hodin;Divadelní soubor bratří Mrštíků, Boleradice;Alena Chalupová;Alois a Vilém Mrštíkové;Maryša;;;;
+úterý   11. října\crlf 16:00 hodin;Chvaletické divadlo Jen tak, Chvaletice;Ivan Loněk;Torsten Buchsteiner;Hráči;;od 15 let
+úterý   11. října\crlf 20:00 hodin;Klubová scéna TMA-divadla;Eva Andělová;Susana Torres Molina;Ona;;;;
+středa  12. října\crlf 9:00 a 19:30 hodin;Divadelní soubor Městečko Trnávka;Ludmila Kučerová;Ladislav Smoljak, Zdeněk Svěrák;Dlouhý, Široký a Krátkozraký;;;;
+středa  12. října\crlf 16:00 hodin;Vítězné výstupy národní soutěže;;Defilé Pohárku SČDO;Monology a dialogy;host přehlídky;;
+čtvrtek 13. října\crlf 9:00 hodin;Divadlo matky Vackové, Praha;Daniela Vacková;Daniela Vacková;Šípková Růženka;host přehlídky;;
+čtvrtek 13. října\crlf 16:00 a 19:30 hodin;Morkovští ochotníci o.s., Morkovice;Václav Bárta;Daniel Přecechtěl a Petr Škrabal;Prach a broky;;;;
+pátek   14. října\crlf 16:00 a 19:30 hodin;DS Žlutičan Žlutice;Břetislav Tetera,~j.h.;Jaromír Břehový;Zátiší s loutnou;;;;
+sobota  15. října\crlf 15:00 hodin;DS Zmatkaři Dobronín;Vladimír Mátl;Isabelle Doré;Cesar a Drana;host přehlídky;;
+\stopHra
+
+\eTABLE
+\egroup
+
+\stoptext

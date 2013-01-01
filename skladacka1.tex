@@ -1,0 +1,155 @@
+\enableregime[utf] 
+\mainlanguage[cz]  
+\input pdfr-def.mkii % glyph to unicode
+
+\usemodule[database]
+
+\setuplayout
+  [backspace=1cm,
+   topspace=1.1cm,
+   width=middle,
+   height=middle,
+   location=middle,
+   header=0pt,
+   footer=0pt]
+
+   
+   
+\setuppapersize[A6][A5,landscape]
+\setuppaper[nx=2,ny=1]
+\setuparranging[XY]
+
+\usetypescript[termes][ec]
+\setupbodyfont[termes,11pt]
+
+\setupcolors[state=start]
+
+\setupinteraction[state=start,color=blue]
+\setupurl[color=blue]
+\setuppagenumbering[location=,state=stop]
+
+
+\definefont [BigFont] [SansBold at 34pt]
+
+
+
+
+\starttext
+
+\setuppapersize[A6][A5,landscape,180]
+\setuplayout
+  [backspace=0.7cm,
+   topspace=1.2cm]
+
+   
+\midaligned{\framed[width=0.95\textwidth,align=flushleft,offset=0.5em]{
+\midaligned{\bf TELEFONNÍ ČÍSLA} \\
+INFORMAČNÍ STŘEDISKO \\
+V~MĚSTSKÉ KNIHOVNĚ  \hfill {\bf 481 540 278 }\\
+                    \hfill {\bf 732 401 614 }\\
+DIVADLO KRAKONOŠ    \hfill {\bf 481 593 408 }\\
+MĚSTSKÝ ÚŘAD        \hfill {\bf 481 593 903 }\\
+UBYTOVÁNÍ SOKOLOVNA \hfill {\bf 481 593 495 }\\
+POŠTA               \hfill {\bf 481 593 549 }\\
+MUZEUM              \hfill {\bf 481 593 118 }\\
+HOTEL VĚTROV        \hfill {\bf 481 593 134 }
+}}
+
+\vfill 
+
+{\ss \bfc Partner akce:} \vskip 1em
+\midaligned{\externalfigure[../unicontrols][width=6cm]}
+\vskip 1em
+{\ss \bfc Záštita:} \vskip 0.5em
+\framed[offset=0cm, frame=off]{
+\framed[align=middle, bottom=\vss, top=\vss, height=2.2cm, frame=off]{
+    \bfa\ss Přemysl Sobotka\\
+    1. místopředseda Senátu\\
+    parlamentu České republiky
+}\hfill
+\framed[align=middle, bottom=\vss, top=\vss, height=2.2cm, frame=off]{\externalfigure[../senat][height=2.0cm]}
+}
+\vfill
+\midaligned{\bf Změna programu vyhrazena!}
+
+
+\page
+\setuplayout
+  [backspace=1cm,width=middle]
+  
+{\switchtobodyfont[10pt] \setupinterlinespace
+\setupalign[nothyphenated, outer]
+\startitemize[packed]
+  \item V~průběhu přehlídky probíhá Seminář Krakonošova divadelního podzimu, Klub režisérů SČDO a v pondělí odpoledne seminář jevištní řeči
+  \item Vzdělávací setkání KDP mladým
+  \item Hodnocení představení denně od 8. do 15. října včetně v~9:30~hodin v~malém sále divadla Krakonoš
+  \item Vítání souborů na MěÚ a před divadlem
+  \item Každý den společenský večer v~hasičovně
+  \item Vstupenky a ubytování se hradí v~hotovosti
+  \item Hromadné objednávky vyfakturujeme
+  \item Vstupenky neodebrané dvě hodiny před začátkem představení propadají
+  \item Objednávky zasílejte do 10. září 2011
+  \item Objednávky lze zrušit 48 hodin předem, jinak jsou předepsány k~úhradě
+  \item Ceny vstupenek: 80~Kč a 60~Kč,\crlf školní představení a monology 30~Kč
+  \item Objednávejte přes Informační středisko
+  \item Vyhodnocení festivalu v~sobotu 15. října \crlf ve 20:00 hodin v~divadle Krakonoš
+  \item Závěrečný bál Sejkorák v~sobotu 15. října \crlf po slavnostním vyhodnocení
+\stopitemize
+\vfill
+Objednávky vyřizuje:
+\vskip 1em
+\startalignment[middle]
+\bf
+Informační středisko KDP - Městská knihovna\crlf
+512 11 Vysoké nad Jizerou\crlf
+tel.: 481 540 278, 732 401 614
+\stopalignment}
+
+\page
+\setuppapersize[A6][A5,landscape]
+
+\dontleavehmode
+\blank[0.1cm]
+\midaligned{\externalfigure[../kdpmaska][width=.85\textwidth]}
+\vfill
+\midaligned{\framed[location=middle,width=0.95\textwidth,align=middle,offset=0.5em]{
+\tfa\setupinterlinespace
+{\bf INTERNET} \\
+www.kdpvysoke.cz \\
+Informační středisko is@kdpvysoke.cz
+}}
+\vfill
+\midaligned{\bf \copyright\ H\&H 2011}
+
+\page
+
+\startalignment[left]
+\BigFont \setupinterlinespace[height=.72, depth=.28, top=1.0,
+                         bottom=0.4, line=2.15ex]
+KRAKONOŠŮV\crlf
+DIVADELNÍ\crlf
+PODZIM
+\stopalignment
+
+\vfill
+
+\startalignment[middle]
+\bf
+XLII. NÁRODNÍ PŘEHLÍDKA \crlf
+VENKOVSKÝCH \crlf
+DIVADELNÍCH SOUBORŮ 
+\stopalignment
+
+\vfill
+
+\startalignment[middle]
+\externalfigure[../divadlo_skica][width=\textwidth]
+\vskip 1em
+\bf
+Vysoké nad Jizerou 7. až 15. října 2011
+\stopalignment
+
+\page
+
+
+\stoptext
